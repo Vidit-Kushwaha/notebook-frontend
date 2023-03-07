@@ -1,10 +1,16 @@
 import './App.css';
+import About from './components/About';
+import Navbar from './components/Navbar';
+import NoteState from './contexts/notes/NotesState';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <NoteState>
+      <div className="App">
+        <Navbar />
+        <About/>
+      </div>
+    </NoteState>
   );
 }
 
