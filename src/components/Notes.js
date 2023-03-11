@@ -1,15 +1,15 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import noteContext from '../contexts/notes/noteContext'
 import NoteItem from './NoteItem';
 
 function Notes() {
-    const context=useContext(noteContext);
-    const {note, setNote}=context
+  const context = useContext(noteContext);
+  const { notes } = context
   return (
     <div>
-    {
-        note.map((ele,key)=>{
-          return <NoteItem ele={ele} key={key}/>
+      {
+          notes.map((ele,key) => {
+          return <NoteItem ele={ele} key={key} />
         })
       }
     </div>
