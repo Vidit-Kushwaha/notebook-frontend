@@ -3,13 +3,11 @@ import AddNote from './AddNote'
 import Notes from './Notes'
 
 function Home() {
-  
+
   return (
     <div className="container">
-      <AddNote/>
-      <div className="col my-3">
-        <Notes/>
-      </div>
+      <AddNote />
+      <Notes />
     </div>
   )
 }

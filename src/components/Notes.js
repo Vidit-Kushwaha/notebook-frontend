@@ -6,13 +6,16 @@ function Notes() {
   const context = useContext(noteContext);
   const { notes } = context
   return (
-    <div>
+
+    <div className='row'>
       {
           notes.map((ele,key) => {
-          return <NoteItem ele={ele} key={key} />
+          return <div className="col-md-4 my-2">
+          <NoteItem ele={ele} key={key} />
+          </div>
         })
       }
-    </div>
+         </div>
   )
 }
 
