@@ -63,7 +63,7 @@ function Notes() {
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" ref={refClose}>Close</button>
-              <button type="button" className="btn btn-primary" onClick={handelClick}>Update Note</button>
+              <button type="button" className="btn btn-primary" disabled={note.etitle.length<5 || note.edescription.length<5} onClick={handelClick}>Update Note</button>
             </div>
           </div>
         </div>
