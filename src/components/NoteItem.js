@@ -9,7 +9,7 @@ function NoteItem(props) {
         <div className="card my-2">
             <div className="card-body d-flex justify-content-around ">
                 <h5 className="card-title ms-2">{ele.title}</h5>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {ele.tag}
                     <span class="visually-hidden">unread messages</span>
                     </span>
