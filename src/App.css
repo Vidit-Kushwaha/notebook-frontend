@@ -1,0 +1,11 @@
+#fname, #lname {
+    color:#252525;
+}
+
+@media (min-width: 768px) {
+    #fname, #lname {
+        width:100%;
+    }
+
+  }
+  
