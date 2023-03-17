@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, Link, useNavigate, useNavigation } from 'react-router-dom'
+import { useLocation, Link, useNavigate} from 'react-router-dom'
 
 function Navbar() {
   let location = useLocation();
@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <nav data-bs-theme="dark" className="navbar bg-dark navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-    <Link class="navbar-brand" to="/">
+    <Link className="navbar-brand" to="/">
       {/* <img src="../../public/ino" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"/> */}
       iNotes</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@ function Navbar() {
             {/* <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
             <Link className="btn btn-primary mx-1" to="/signup" role="button">SignUp</Link> */}
           </form>
-          :<button className="btn btn-primary mx-1" role="button" onClick={logOut}>LogOut</button>
+          :<button className="btn btn-primary mx-1" onClick={logOut}>LogOut</button>
           
 }
         </div>
