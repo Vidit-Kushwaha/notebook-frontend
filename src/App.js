@@ -12,6 +12,7 @@ import SignUp from "./components/SignUp";
 import NoteState from './contexts/notes/NotesState';
 
 function App() {
+
   return (
     <BrowserRouter>
     <NoteState>

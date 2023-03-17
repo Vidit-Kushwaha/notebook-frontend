@@ -75,7 +75,7 @@ function Notes() {
           <div className="col-md-4 my-2" key={index}>
             <NoteItem ele={note} updateNote={updateNote}/>
           </div>
-        ))) : <div className="d-flex justify-content-center fw-bold fs-1">No Notes avalable</div>}
+        ))) : <div className="d-flex justify-content-center fw-bold fs-1">No Notes available</div>}
       </div>
     </>
   );

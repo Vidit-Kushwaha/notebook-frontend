@@ -1,13 +1,19 @@
 import React from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { useLocation, Link, useNavigate, useNavigation } from 'react-router-dom'
 
 function Navbar() {
   let location = useLocation();
-
+  let navigate= useNavigate()
+  const logOut=()=>{
+    localStorage.setItem('token',"");
+    navigate('/login')
+  }
   return (
     <nav data-bs-theme="dark" className="navbar bg-dark navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">iNotes</Link>
+    <Link class="navbar-brand" to="/">
+      {/* <img src="../../public/ino" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"/> */}
+      iNotes</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -20,10 +26,15 @@ function Navbar() {
               <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
             </li>
           </ul>
+          {
+            localStorage.getItem('token')===""?
           <form className="d-flex">
-            <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
-            <Link className="btn btn-primary mx-1" to="/signup" role="button">SignUp</Link>
+            {/* <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
+            <Link className="btn btn-primary mx-1" to="/signup" role="button">SignUp</Link> */}
           </form>
+          :<button className="btn btn-primary mx-1" role="button" onClick={logOut}>LogOut</button>
+          
+}
         </div>
       </div>
     </nav>
